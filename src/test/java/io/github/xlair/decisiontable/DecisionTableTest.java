@@ -18,14 +18,14 @@ import io.github.xlair.decisiontable.parkingdiscount.rules.WatchTheMovieRule;
 
 public class DecisionTableTest {
 
-    ParkingDiscountDecisionTable decisionTable = new ParkingDiscountDecisionTable();
-    SimpleParkingDiscountDecisionTable simpleDecisionTable = new SimpleParkingDiscountDecisionTable();
+    private ParkingDiscountDecisionTable decisionTable = new ParkingDiscountDecisionTable();
+    private SimpleParkingDiscountDecisionTable simpleDecisionTable = new SimpleParkingDiscountDecisionTable();
 
-    MoreThan30dollarsAndLessThan100dollars moreThan30dollarsAndLessThan100dollars = new MoreThan30dollarsAndLessThan100dollars();
-    MoreThan100dollarsAndLessThan300dollers moreThan100dollarsAndLessThan300dollers = new MoreThan100dollarsAndLessThan300dollers();
-    MoreThan300dollars moreThan300dollars = new MoreThan300dollars();
-    PaymentPriceRule paymentPriceRule = new PaymentPriceRule();
-    WatchTheMovieRule watchTheMovieRule = new WatchTheMovieRule();
+    private MoreThan30dollarsAndLessThan100dollars moreThan30dollarsAndLessThan100dollars = new MoreThan30dollarsAndLessThan100dollars();
+    private MoreThan100dollarsAndLessThan300dollers moreThan100dollarsAndLessThan300dollers = new MoreThan100dollarsAndLessThan300dollers();
+    private MoreThan300dollars moreThan300dollars = new MoreThan300dollars();
+    private PaymentPriceRule paymentPriceRule = new PaymentPriceRule();
+    private WatchTheMovieRule watchTheMovieRule = new WatchTheMovieRule();
 
     @Test
     public void test01() {
