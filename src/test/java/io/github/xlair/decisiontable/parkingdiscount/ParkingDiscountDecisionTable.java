@@ -20,13 +20,13 @@ public class ParkingDiscountDecisionTable extends DecisionTable<ParkingDiscountA
                 .then(new ParkingDiscountAction(ParkingDiscount.THIRTY_MINUTE))
                 .build());
         // #2
-        entry(new ConditionEntry.Builder<ParkingDiscountAction>()
-                .when(MoreThan30dollarsAndLessThan100dollars.class, true)
-                .when(MoreThan100dollarsAndLessThan300dollers.class, false)
-                .when(MoreThan300dollars.class, false)
-                .when(WatchTheMovieRule.class, false)
-                .then(new ParkingDiscountAction(ParkingDiscount.ONE_HOUR))
-                .build());
+        ConditionEntry<ParkingDiscountAction> entry = new ConditionEntry<>();
+        entry.when(MoreThan30dollarsAndLessThan100dollars.class, true);
+        entry.when(MoreThan100dollarsAndLessThan300dollers.class, false);
+        entry.when(MoreThan300dollars.class, false);
+        entry.when(WatchTheMovieRule.class, false);
+        entry.then(new ParkingDiscountAction(ParkingDiscount.ONE_HOUR));
+        entry(entry);
         // #3
         entry(new ConditionEntry.Builder<ParkingDiscountAction>()
                 .when(MoreThan30dollarsAndLessThan100dollars.class, false)

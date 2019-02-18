@@ -33,6 +33,10 @@ public class ConditionEntry<A extends DecisionAction> {
         resultMap.add(ruleClass.getSimpleName() + SEPARATOR + entry.toString());
     }
 
+    public void then(A action) {
+        this.action = action;
+    }
+
     public static class Builder<A extends DecisionAction> {
         private A action;
         private Set<String> resultMap = new HashSet<>();
